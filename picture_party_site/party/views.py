@@ -16,10 +16,6 @@ def detail(request, party_id):
     return render(request, "party/detail.html", {"party": party})
 
 
-def add_picture(request, party_id):
-    return HttpResponse("You're adding pictures to %s." % party_id)
-
-
 def add_party(request):
     if request.method == "POST":
 
@@ -30,7 +26,7 @@ def add_party(request):
             party = Party(**form.cleaned_data)
             party.save()
 
-            return redirect(detail, party_id=party.id)
+            return redirect('party:detail', party_id=party.id)
     else:
         form = PartyForm()
 

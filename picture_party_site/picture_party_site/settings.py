@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "party.apps.PartyConfig",
+    "picture.apps.PictureConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

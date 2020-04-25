@@ -1,4 +1,4 @@
-<form action="/party/add/" method="post">
+<form action="{% url 'party:add_party' %}" method="post">
     {% csrf_token %}
     {{ partyForm }}
     <input type="submit" value="Submit">
