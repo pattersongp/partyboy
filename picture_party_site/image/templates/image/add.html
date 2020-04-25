@@ -1,9 +1,9 @@
 {% block title %}Adding to party: {{ party.party_name }}{% endblock %}
 
 <form enctype="multipart/form-data"
-      action="{% url 'picture:add_picture' party.id %}"
+      action="{% url 'image:add_image' party.id %}"
       method="post">
     {% csrf_token %}
-    {{ pictureForm }}
+    {{ imageForm }}
     <input type="submit" value="Submit">
 </form>
