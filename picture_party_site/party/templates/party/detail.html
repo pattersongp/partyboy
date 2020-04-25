@@ -1,1 +1,11 @@
 {{ party }}
+
+{% load static %}
+
+<br/>
+
+{% for image in images %}
+  <img src="{{ image.image.url }}" alt="Not available.">
+  <br/>
+{% endfor %}
+

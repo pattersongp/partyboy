@@ -16,10 +16,8 @@ def index(request):
 
 def detail(request, party_id):
     party = get_object_or_404(Party, pk=party_id)
-    images = Image.objects.filter(party_id = party_id)
-    print(images)
-
-    return render(request, "party/detail.html", {"party": party})
+    images = Image.objects.filter(party_id=party_id)
+    return render(request, "party/detail.html", {"party": party, "images": images})
 
 
 def add_party(request):
