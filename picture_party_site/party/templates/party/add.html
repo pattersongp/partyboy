@@ -1,0 +1,5 @@
+<form action="/party/add/" method="post">
+    {% csrf_token %}
+    {{ partyForm }}
+    <input type="submit" value="Submit">
+</form>
