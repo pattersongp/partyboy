@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
+from django.apps import apps
 
 from .models import Party
 from .forms import PartyForm
+
+Image = apps.get_model('image', 'Image')
 
 
 def index(request):
@@ -13,8 +16,8 @@ def index(request):
 
 def detail(request, party_id):
     party = get_object_or_404(Party, pk=party_id)
-
-
+    images = Image.objects.filter(party_id = party_id)
+    print(images)
 
     return render(request, "party/detail.html", {"party": party})
 
