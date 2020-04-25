@@ -1,6 +1,10 @@
+{% load static %}
+
 {{ party }}
 
-{% load static %}
+<br/>
+
+<a href="{% url 'image:add_image' party.id %}">Add an image to {{ party.party_name }}</a>
 
 <br/>
 
@@ -8,4 +12,3 @@
   <img src="{{ image.image.url }}" alt="Not available.">
   <br/>
 {% endfor %}
-

@@ -9,16 +9,29 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('party', '0002_auto_20200425_1340'),
+        ("party", "0002_auto_20200425_1340"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Image',
+            name="Image",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='')),
-                ('party_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='party.Party')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="")),
+                (
+                    "party_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="party.Party"
+                    ),
+                ),
             ],
         ),
     ]
