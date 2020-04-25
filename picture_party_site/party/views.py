@@ -13,6 +13,9 @@ def index(request):
 
 def detail(request, party_id):
     party = get_object_or_404(Party, pk=party_id)
+
+
+
     return render(request, "party/detail.html", {"party": party})
 
 
