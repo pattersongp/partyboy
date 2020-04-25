@@ -1,7 +1,7 @@
 {% if latest_party_list %}
     <ul>
     {% for party in latest_party_list %}
-      <li><a href="{% url 'detail' party.id %}">{{ party.party_name }}</a></li>
+      <li><a href="{% url 'party:detail' party.id %}">{{ party.party_name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
