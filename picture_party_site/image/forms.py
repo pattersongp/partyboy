@@ -1,5 +1,5 @@
 from django import forms
 
 
-class PictureForm(forms.Form):
-    image = forms.ImageField(label="Picture to add")
+class ImageForm(forms.Form):
+    image = forms.ImageField(label="Image to add")
