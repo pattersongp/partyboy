@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn --pythonpath picture_party_site picture_party_site.wsgi

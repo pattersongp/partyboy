@@ -13,6 +13,7 @@ pathspec==0.8.0
 Pillow==7.1.1
 psycopg2==2.8.5
 psycopg2-binary==2.8.5
+python-dotenv==0.13.0
 pytz==2019.3
 regex==2020.4.4
 soupsieve==2.0
