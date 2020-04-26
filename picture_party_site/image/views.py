@@ -23,9 +23,7 @@ def add_image(request, party_id):
             image = Image(**image_data)
             image.save()
 
-            return render(
-                request, "image/add.html", {"party": party, "imageForm": ImageForm()}
-            )
+            return redirect("party:detail", party_id=party.id)
         return HttpResponse(f"Something went wrong...")
     else:
         form = ImageForm()
